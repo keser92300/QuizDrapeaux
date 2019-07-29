@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controler.MainActivity"
+        android:background="@drawable/gradius">
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <TextView
+                android:layout_marginTop="15dp"
+                android:text="@string/app_name"
+                android:textSize="@dimen/title_size"
+                android:gravity="center"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:id="@+id/textView"/>
+
+        <ImageView android:layout_width="@dimen/logo_size"
+                   android:layout_height="@dimen/logo_size"
+                   android:layout_marginTop="10dp"
+                   android:layout_gravity="center"
+                   android:contentDescription="@string/app_name"
+                   android:src="@drawable/eart"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:gravity="center">
+
+            <Button
+                    android:text="@string/btn_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button"
+                    android:textSize="@dimen/default_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="@dimen/btn_main_margin"
+                    android:layout_marginLeft="@dimen/btn_main_margin"
+                    android:padding="@dimen/btn_main_padding"
+                    android:layout_marginBottom="@dimen/btn_main_margin_bottom"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_button"/>
+
+            <Button
+                    android:text="@string/btn_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button2"
+                    android:textSize="@dimen/default_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="@dimen/btn_main_margin"
+                    android:layout_marginLeft="@dimen/btn_main_margin"
+                    android:padding="@dimen/btn_main_padding"
+                    android:layout_marginBottom="@dimen/btn_main_margin_bottom"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_button"/>
+
+            <Button
+                    android:text="@string/btn_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button3"
+                    android:textSize="@dimen/default_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="@dimen/btn_main_margin"
+                    android:layout_marginLeft="@dimen/btn_main_margin"
+                    android:padding="@dimen/btn_main_padding"
+                    android:layout_marginBottom="@dimen/btn_main_margin_bottom"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_button"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+            android:layout_width="@dimen/progress_size"
+            android:layout_height="@dimen/progress_size"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:id="@+id/progressMain"/>
+
+</RelativeLayout>

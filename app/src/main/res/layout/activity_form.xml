@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controler.ParamsActivity"
+        android:background="@drawable/gradius">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <TextView
+                android:layout_marginTop="15dp"
+                android:text="@string/title_form"
+                android:textSize="@dimen/sub_title_size"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvFormTitre"/>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="3dp"
+              android:layout_marginRight="2dp"
+              android:layout_marginLeft="2dp"
+              android:layout_marginTop="@dimen/margin_elements"
+              android:background="@color/colorAccent"/>
+
+        <ImageView android:layout_width="@dimen/logo_size"
+                   android:layout_height="@dimen/logo_size"
+                   android:layout_marginTop="@dimen/margin_elements2"
+                   android:layout_gravity="center"
+                   android:id="@+id/imageForm"
+                   android:contentDescription="@string/descr_user_img"
+                   android:src="@drawable/user_no_image"/>
+
+        <Button
+                android:text="@string/add_image"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonForm"
+                android:textSize="@dimen/default_text_size"
+                android:textColor="@color/colorAccent"
+                android:layout_marginRight="@dimen/margin_elements2"
+                android:layout_marginLeft="@dimen/margin_elements2"
+                android:layout_marginTop="@dimen/margin_elements"
+                android:padding="@dimen/btn_main_padding"
+                android:layout_marginBottom="@dimen/margin_elements2"
+                android:visibility="visible"
+                android:background="@drawable/rounded_button"/>
+
+        <TextView
+                android:layout_marginTop="@dimen/margin_elements2"
+                android:text="@string/entry_userName"
+                android:textSize="@dimen/default_text_size2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/tvNameForm"/>
+
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="@string/userName"
+                  android:id="@+id/edTextNameForm"
+                  android:maxLength="25"
+                  android:inputType="textCapSentences"/>
+
+        <TextView
+                android:layout_marginTop="@dimen/margin_elements2"
+                android:text="@string/how_old_are_u"
+                android:textSize="@dimen/default_text_size2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/tvAgeForm"/>
+
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="@string/age"
+                  android:id="@+id/edTextAgeForm"
+                  android:maxLength="2"
+                  android:inputType="number"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:layout_marginBottom="@dimen/margin_elements"
+                      android:orientation="horizontal"
+                      android:id="@+id/layoutValidForm">
+
+            <ImageView android:layout_width="@dimen/small_image_size"
+                       android:layout_height="@dimen/small_image_size"
+                       android:layout_marginEnd="@dimen/margin_elements2"
+                       android:src="@drawable/return_icon2"
+                       android:contentDescription="@string/descr_back"
+                       android:id="@+id/imageReturnForm"/>
+
+            <ImageView android:layout_width="@dimen/small_image_size"
+                       android:layout_height="@dimen/small_image_size"
+                       android:layout_marginStart="@dimen/margin_elements2"
+                       android:src="@drawable/validate"
+                       android:contentDescription="@string/descr_validate"
+                       android:id="@+id/imageValidForm"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controler.QuizzActivity"
+        android:background="@drawable/gradius">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <TextView
+                android:text="@string/niveau"
+                android:gravity="center"
+                android:textSize="@dimen/level_text_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/tvNiveauQuizz"/>
+
+
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="@dimen/image_quizz_size"
+                   android:id="@+id/imageFlag"
+                   android:contentDescription="@string/app_name"
+                   android:src="@drawable/eart"/>
+
+        <TextView
+                android:text="@string/quizz_question"
+                android:gravity="center"
+                android:textSize="@dimen/question_quizz_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_elements"
+                android:id="@+id/tvQuizz"/>
+
+        <ProgressBar android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/progress_chrono_quizz"
+                     android:layout_marginTop="@dimen/margin_top_chrono"
+                     android:background="@color/colorBackground"
+                     style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                     android:progress="0"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:id="@+id/layoutQuizzButtons"
+                      android:layout_marginTop="@dimen/margin_elements">
+
+            <Button
+                    android:text="@string/answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonAnswer1"
+                    android:textSize="@dimen/default_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="@dimen/margin_elements2"
+                    android:layout_marginLeft="@dimen/margin_elements2"
+                    android:padding="1dp"
+                    android:layout_marginBottom="@dimen/margin_elements2"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_button"/>
+
+            <Button
+                    android:text="@string/answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonAnswer2"
+                    android:textSize="@dimen/default_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="@dimen/margin_elements2"
+                    android:layout_marginLeft="@dimen/margin_elements2"
+                    android:padding="1dp"
+                    android:layout_marginBottom="@dimen/margin_elements2"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_button"/>
+
+            <Button
+                    android:text="@string/answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonAnswer3"
+                    android:textSize="@dimen/default_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="@dimen/margin_elements2"
+                    android:layout_marginLeft="@dimen/margin_elements2"
+                    android:padding="1dp"
+                    android:layout_marginBottom="@dimen/margin_elements2"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_button"/>
+
+            <Button
+                    android:text="@string/answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonAnswer4"
+                    android:textSize="@dimen/default_text_size"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginRight="@dimen/margin_elements2"
+                    android:layout_marginLeft="@dimen/margin_elements2"
+                    android:padding="1dp"
+                    android:layout_marginBottom="@dimen/margin_elements2"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_button"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradius"
+                    android:id="@+id/layoutLoadQuizz"
+                    android:visibility="gone">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+            <TextView
+                    android:gravity="center"
+                    android:textSize="@dimen/pourcent_load_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_elements"
+                    android:id="@+id/tvPourcentLoadQuizz"/>
+
+            <ProgressBar android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/progress_quizz_hor"
+                         android:layout_marginTop="@dimen/margin_elements"
+                         android:background="@color/colorPrimary"
+                         style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                         android:progress="0"/>
+
+        </LinearLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:textSize="@dimen/text_load_size"
+                          android:text="@string/loading_text"/>
+
+                <ImageView android:layout_width="@dimen/logo_size"
+                           android:layout_height="@dimen/logo_size"
+                           android:layout_marginTop="@dimen/margin_elements"
+                           android:layout_gravity="center"
+                           android:contentDescription="@string/descr_wait"
+                           android:id="@+id/earthQuizzLoad"
+                           android:src="@drawable/eart"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:id="@+id/layoutScoreQuizz"
+                      android:visibility="gone">
+
+            <ImageView android:layout_width="@dimen/image_user_quizz_size"
+                       android:layout_height="@dimen/image_user_quizz_size"
+                       android:id="@+id/imageUserQuizz"
+                       android:contentDescription="@string/descr_user_img"
+                       android:layout_margin="3dp"
+                       android:src="@drawable/user_no_image"/>
+
+            <TextView android:id="@+id/tvScoreQuizz"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:textColor="@color/colorPrimary"
+                      android:text="@string/zero_points"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+        <ImageView android:layout_width="@dimen/small_image_size"
+                   android:layout_height="@dimen/small_image_size"
+                   android:layout_margin="3dp"
+                   android:id="@+id/imageVolumeQuizz"
+                   android:contentDescription="@string/descr_volume"
+                   android:visibility="gone"
+                   android:src="@drawable/util_volume_mute"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_wait"
+                    android:gravity="center">
+
+        <ImageView android:layout_width="@dimen/logo_size"
+                   android:layout_height="@dimen/logo_size"
+                   android:id="@+id/imageWait"
+                   android:src="@drawable/wait"
+                   android:contentDescription="@string/descr_wait"
+                   android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <ProgressBar android:layout_width="@dimen/progress_size"
+                 android:layout_height="@dimen/progress_size"
+                 android:layout_centerInParent="true"
+                 android:visibility="gone"
+                 android:id="@+id/progressQuizz"/>
+
+
+</RelativeLayout>

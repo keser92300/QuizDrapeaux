@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controler.ParamsActivity"
+        android:background="@drawable/gradius">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+
+            <TextView
+                    android:layout_marginTop="15dp"
+                    android:text="@string/parameters"
+                    android:textSize="@dimen/params_title_size"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvParamsTitre"/>
+
+            <ImageView android:layout_width="@dimen/logo_size"
+                       android:layout_height="@dimen/logo_size"
+                       android:layout_marginTop="@dimen/margin_elements2"
+                       android:layout_gravity="center"
+                       android:id="@+id/imageParams"
+                       android:contentDescription="@string/descr_user_img"
+                       android:src="@drawable/user_no_image"/>
+
+            <TextView
+                    android:layout_marginTop="@dimen/margin_elements2"
+                    android:layout_marginBottom="@dimen/margin_elements2"
+                    android:textSize="@dimen/default_text_size2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/tvParamsInfos"/>
+
+
+
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                android:hint="@string/default_hint"
+                android:id="@+id/edTextParams"
+                          android:maxLength="25"
+                android:visibility="gone"/>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                          android:layout_marginBottom="5dp"
+                          android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/layoutValidParams"
+            android:visibility="gone">
+
+                <ImageView android:layout_width="@dimen/small_image_size"
+                           android:layout_height="@dimen/small_image_size"
+                           android:layout_marginEnd="@dimen/margin_elements"
+                           android:src="@drawable/return_icon2"
+                           android:id="@+id/imageReturnParams"
+                           android:contentDescription="@string/descr_back"
+                />
+
+                <ImageView android:layout_width="@dimen/small_image_size"
+                           android:layout_height="@dimen/small_image_size"
+                           android:layout_marginStart="@dimen/margin_elements"
+                           android:src="@drawable/validate"
+                           android:id="@+id/imageValidParams"
+                           android:contentDescription="@string/descr_validate"
+                />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="3dp"
+                  android:layout_marginTop="@dimen/margin_elements"
+                  android:background="@color/colorAccent"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/recycler"/>
+
+        </LinearLayout>
+
+    <ProgressBar android:layout_width="@dimen/progress_size"
+                 android:layout_height="@dimen/progress_size"
+    android:layout_centerInParent="true"
+    android:visibility="gone"
+    android:id="@+id/progressParams"/>
+
+</RelativeLayout>
